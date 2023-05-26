@@ -1,6 +1,6 @@
 package sorting;
 import java.util.Scanner;
-
+// for simple selection sort
 public class selectionSort {
 
     
