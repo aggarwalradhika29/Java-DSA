@@ -2,13 +2,12 @@ package sorting;
 import java.util.Scanner;
 // for simple selection sort
 public class selectionSort {
-
-    
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int ar[] = {13, 46, 24, 52, 20, 9};
         int n= ar.length;
-        selection(ar, n);
+        // selection(ar, n);
+        bubble(ar, n);
         in.close();
     }
 
@@ -27,6 +26,22 @@ public class selectionSort {
             int temp = ar[i];
             ar[i] = ar[min];
             ar[min] = temp;
+
+            output(ar);
+            System.out.println();
+        }
+    }
+
+    public static void bubble(int ar[], int n) {
+        for (int i = n-1; i>=0; i--) {
+            for(int j = 0; j<=i-1; j++) {
+                if(ar[j] > ar[j+1]) {
+                    // swap
+                    int temp = ar[j];
+                    ar[j] = ar[j+1];
+                    ar[j+1] = temp;
+                }
+            }
 
             output(ar);
             System.out.println();
