@@ -1,15 +1,13 @@
 package sorting;
-import java.util.Scanner;
+
 // for basic sorting techniques: selection, bubble, insertion
 public class sortingBasic {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
         int ar[] = {13, 46, 24, 52, 20, 9};
         int n= ar.length;
         // selection(ar, n);
         // bubble(ar, n);
         insertion(ar, n);
-        in.close();
     }
 
     public static void selection(int ar[], int n) {
