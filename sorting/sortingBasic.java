@@ -1,13 +1,14 @@
 package sorting;
 import java.util.Scanner;
-// for simple selection sort
-public class selectionSort {
+// for basic sorting techniques: selection, bubble, insertion
+public class sortingBasic {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int ar[] = {13, 46, 24, 52, 20, 9};
         int n= ar.length;
         // selection(ar, n);
-        bubble(ar, n);
+        // bubble(ar, n);
+        insertion(ar, n);
         in.close();
     }
 
@@ -45,6 +46,22 @@ public class selectionSort {
 
             output(ar);
             System.out.println();
+        }
+    }
+
+    public static void insertion(int ar[], int n) {
+        for (int i =0; i<=n-1; i++) {
+            int j = i;
+            while(j>0 && ar[j-1] > ar[j]) {
+                int temp = ar[j];
+                ar[j] = ar[j-1];
+                ar[j-1] = temp;
+                j--;
+            }
+
+            output(ar);
+            System.out.println();
+
         }
     }
 
